@@ -1,0 +1,4 @@
+pavlov yalan jbsi.txt adlı txt dosyası pavlovun dc serverinde katıla + boosta özel verdiği jb promptudur bu promptu denerseniz çalışmicaktır
+ama youtube de gösterdiği prompt neden çalışıyordu? Çünkü ikisi aynı değil ve ayrıca zaten boosta özel olan promptları sonrasında herkese açık yapıyordur
+ve jbleri çalışmamaktadır
+ekran görüntüsüne de bakarsanız yapay zekayı ne kadar salak saçma birşeye dönüştürdüğünü görebilirsiniz
