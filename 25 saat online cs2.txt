@@ -1,0 +1,555 @@
+Sen çok iyi bir oyun geliştiricisisin. Bana 25 saat içinde tamamlanabilecek, Counter-Strike 2’den ilham alan ama telif hakkı ihlali yapmayan, tamamen orijinal isimli ve orijinal assetlerle yapılacak bir taktiksel FPS prototipi hazırlamamda yardım et.
+
+OYUNUN AMACI:
+25 saatlik geliştirme süresi içinde oynanabilir bir FPS prototipi oluşturmak istiyorum. Oyun CS2 mantığına benzesin ama birebir kopya olmasın. Harita, silah isimleri, sesler, modeller, logolar ve UI tamamen orijinal olsun.
+
+Örnek:
+CS2’deki gibi bomba kurma/çözme mantığı olabilir ama harita Dust2, Mirage, Inferno gibi birebir kopya olmayacak.
+
+Örnek:
+AK-47 veya M4A4 gibi gerçek isimler yerine “Rifle-X”, “Tactical AR”, “Compact SMG” gibi sahte/orijinal silah isimleri kullanılacak.
+
+Örnek:
+Takımlar “Terrorist / Counter-Terrorist” yerine “Attackers / Defenders” veya “Red Team / Blue Team” olacak.
+
+KULLANILACAK TEKNOLOJİ:
+Unity ile yapılmasını istiyorum.
+
+Örnek:
+Unity 2022 LTS veya Unity 2023 LTS kullanılabilir.
+
+Örnek:
+Kodlar C# ile yazılacak.
+
+Örnek:
+Prototip olduğu için assetler basit olabilir: küpler, basit silah modelleri, placeholder sesler, basit UI.
+
+GENEL OYUN TÜRÜ:
+Taktiksel FPS prototipi olacak.
+
+Örnek:
+Oyuncu birinci şahıs kamerayla hareket edecek.
+
+Örnek:
+WASD ile yürüyecek, mouse ile bakacak, sol tık ile ateş edecek, R ile reload yapacak.
+
+Örnek:
+Shift ile yavaş/koşma sistemi olabilir ama CS tarzı denge için koşarken nişan bozulabilir.
+
+OYUN MODU:
+Basit bomba kurma/çözme modu istiyorum.
+
+Örnek:
+Attackers takımı bomba bölgesine gidip E tuşuna basılı tutarak bomba kuracak.
+
+Örnek:
+Defenders takımı kurulan bombayı E tuşuna basılı tutarak çözecek.
+
+Örnek:
+Bomba kurulursa 40 saniyelik sayaç başlayacak. Süre biterse Attackers kazanacak. Bomba çözülürse Defenders kazanacak.
+
+RAUND SİSTEMİ:
+Kısa ve basit round sistemi olsun.
+
+Örnek:
+Her round 2 dakika sürsün.
+
+Örnek:
+Takımlardan biri tamamen ölürse diğer takım kazansın.
+
+Örnek:
+Bomba patlarsa Attackers kazansın.
+
+Örnek:
+Bomba çözülürse Defenders kazansın.
+
+Örnek:
+Süre biter ve bomba kurulmamışsa Defenders kazansın.
+
+OYUNCU KONTROLÜ:
+Bana tam çalışan bir FPS controller sistemi oluştur.
+
+Örnek:
+Mouse ile kamera dönecek.
+
+Örnek:
+WASD ile hareket edilecek.
+
+Örnek:
+Space ile zıplama olacak.
+
+Örnek:
+Ctrl ile eğilme olabilir ama prototip için basit tutulabilir.
+
+Örnek:
+Oyuncunun canı 100 olacak.
+
+SİLAH SİSTEMİ:
+Basit ama gerçekçi hissettiren silah sistemi istiyorum.
+
+Örnek:
+Primary silah: Rifle-X
+Hasar: 28
+Şarjör: 30 mermi
+Reload süresi: 2 saniye
+Ateş hızı: orta-yüksek
+
+Örnek:
+Secondary silah: Pistol-9
+Hasar: 20
+Şarjör: 12 mermi
+Reload süresi: 1.4 saniye
+Ateş hızı: düşük-orta
+
+Örnek:
+Knife yerine basit yakın saldırı sistemi olabilir ama şart değil.
+
+SİLAH MEKANİKLERİ:
+Sadece dümdüz raycast atmasın, FPS hissi olsun.
+
+Örnek:
+Sol tık basılı tutulunca otomatik ateş eden silah sistemi.
+
+Örnek:
+Recoil sistemi olsun: ateş ettikçe kamera yukarı doğru hafif zıplasın.
+
+Örnek:
+Spread sistemi olsun: hareket ederken mermi daha dağınık gitsin.
+
+Örnek:
+Ayakta dururken daha isabetli, yürürken daha az isabetli, zıplarken çok isabetsiz olsun.
+
+Örnek:
+Crosshair ateş ederken büyüsün, durunca küçülsün.
+
+BOT SİSTEMİ:
+Multiplayer şart değil. 25 saatlik prototip için botlarla oynanabilir olsun.
+
+Örnek:
+Oyuncu Red Team’de olsun, karşısında 5 bot olsun.
+
+Örnek:
+Botlar NavMesh ile haritada gezsin.
+
+Örnek:
+Botlar oyuncuyu görünce ateş etsin.
+
+Örnek:
+Botların görüş mesafesi olsun.
+
+Örnek:
+Botlar direkt hile gibi görmesin; sadece görüş açısındaysa oyuncuyu fark etsin.
+
+Örnek:
+Botlar bomba bölgesine doğru ilerleyebilir veya basit devriye noktalarını takip edebilir.
+
+YAPAY ZEKA DETAYI:
+Bot AI çok karmaşık olmak zorunda değil ama oynanabilir olsun.
+
+Örnek:
+Bot state sistemi:
+
+* Patrol
+* Chase
+* Attack
+* Search
+* Dead
+
+Örnek:
+Bot oyuncuyu görürse Attack moduna geçsin.
+
+Örnek:
+Oyuncu görüşten çıkarsa Search moduna geçsin.
+
+Örnek:
+Canı 0 olursa Dead moduna geçsin.
+
+HARİTA TASARIMI:
+Bana küçük ama CS tarzı taktiksel bir harita tasarla.
+
+Örnek:
+Haritada 2 spawn noktası olsun:
+
+* Attacker Spawn
+* Defender Spawn
+
+Örnek:
+Haritada 1 bomba alanı olsun:
+
+* Site A
+
+Örnek:
+3 ana yol olsun:
+
+* Middle
+* Left Corridor
+* Right Corridor
+
+Örnek:
+Oyuncuların saklanabileceği kutular, duvarlar, dar geçitler ve açık alanlar olsun.
+
+Örnek:
+Harita gri kutulardan/prototype blockout şeklinde olabilir ama oynanabilir akışa sahip olsun.
+
+Örnek:
+Haritada çok büyük boş alan olmasın. Çatışma mesafeleri kısa ve orta mesafeli olsun.
+
+GÖRSEL STİL:
+Prototip ama temiz görünsün.
+
+Örnek:
+Duvarlar gri, zemin koyu gri, kutular kahverengi olabilir.
+
+Örnek:
+Takımlar renklerle ayrılsın: Red Team kırmızı detaylı, Blue Team mavi detaylı.
+
+Örnek:
+Silah modeli basit bir 3D obje olabilir.
+
+Örnek:
+UI sade ve okunabilir olsun.
+
+UI / HUD:
+Ekranda gerekli bilgiler görünsün.
+
+Örnek:
+Sol altta can: HP 100
+
+Örnek:
+Sağ altta mermi: 30 / 90
+
+Örnek:
+Üstte round süresi: 01:45
+
+Örnek:
+Ortada crosshair olsun.
+
+Örnek:
+Bomba kurulunca üstte “Bomb Planted” yazsın ve geri sayım başlasın.
+
+Örnek:
+Round bitince ekranda kazanan takım yazsın:
+“Attackers Win”
+“Defenders Win”
+
+MENÜ SİSTEMİ:
+Basit ana menü olsun.
+
+Örnek:
+Play butonu.
+
+Örnek:
+Settings butonu.
+
+Örnek:
+Quit butonu.
+
+Örnek:
+Settings içinde mouse sensitivity ayarı olsun.
+
+Örnek:
+Play’e basınca oyun sahnesi açılsın.
+
+SES SİSTEMİ:
+Basit ses sistemi olsun.
+
+Örnek:
+Ateş sesi.
+
+Örnek:
+Reload sesi.
+
+Örnek:
+Hit sesi.
+
+Örnek:
+Bomba kurma sesi.
+
+Örnek:
+Bomba bip sesi.
+
+Örnek:
+Round kazanma sesi.
+
+Sesler placeholder olabilir ama kod sistemi hazır olsun.
+
+EFEKTLER:
+Basit efektler ekle.
+
+Örnek:
+Ateş ederken muzzle flash.
+
+Örnek:
+Duvara mermi çarpınca küçük particle efekti.
+
+Örnek:
+Düşmana vurunca hit marker.
+
+Örnek:
+Düşman ölünce basit ragdoll yerine yere düşme/disable sistemi.
+
+KOD YAPISI:
+Kodları temiz ve dosya dosya ver.
+
+Örnek:
+PlayerController.cs
+Oyuncu hareketi, mouse look, zıplama, eğilme.
+
+Örnek:
+Weapon.cs
+Silah hasarı, mermi, reload, fire rate, recoil, spread.
+
+Örnek:
+WeaponManager.cs
+Silah değiştirme, primary/secondary yönetimi.
+
+Örnek:
+Health.cs
+Can sistemi, hasar alma, ölme.
+
+Örnek:
+BotAI.cs
+Bot davranışları, takip, saldırı, ölme.
+
+Örnek:
+BombSite.cs
+Bomba kurma alanı.
+
+Örnek:
+BombManager.cs
+Bomba kuruldu mu, sayaç, patlama, çözme.
+
+Örnek:
+RoundManager.cs
+Round başlatma, bitirme, kazananı belirleme.
+
+Örnek:
+GameUI.cs
+HP, ammo, timer, round sonucu, crosshair güncelleme.
+
+Örnek:
+MainMenu.cs
+Menü butonları.
+
+PROJE KLASÖR YAPISI:
+Bana düzenli klasör yapısı öner.
+
+Örnek:
+Assets/
+Scripts/
+Player/
+Weapons/
+AI/
+GameMode/
+UI/
+Prefabs/
+Player/
+Bots/
+Weapons/
+Map/
+Scenes/
+MainMenu.unity
+PrototypeMap.unity
+Materials/
+Audio/
+UI/
+
+ADIM ADIM KURULUM:
+Bana hiçbir şey atlamadan anlat.
+
+Örnek:
+
+1. Unity Hub aç.
+2. Yeni 3D proje oluştur.
+3. Input ayarlarını yap.
+4. CharacterController ekle.
+5. Player objesi oluştur.
+6. Camera objesini player içine koy.
+7. Scripts klasörü oluştur.
+8. PlayerController.cs dosyasını oluştur.
+9. Kodu yapıştır.
+10. Inspector ayarlarını yap.
+11. Map için Plane ve Cube objeleri koy.
+12. NavMesh kur.
+13. Bot prefab oluştur.
+14. UI Canvas oluştur.
+15. RoundManager objesi oluştur.
+16. Play’e basıp test et.
+
+25 SAATLİK GELİŞTİRME PLANI:
+Bana gerçekçi bir zaman planı çıkar.
+
+Örnek:
+Saat 0-2:
+Unity projesi açılır, klasör yapısı kurulur, FPS controller yapılır.
+
+Örnek:
+Saat 2-5:
+Silah sistemi, raycast ateş, reload, ammo sistemi yapılır.
+
+Örnek:
+Saat 5-8:
+Can sistemi, hasar alma, düşman ölümü yapılır.
+
+Örnek:
+Saat 8-11:
+Bot AI temel hali yapılır.
+
+Örnek:
+Saat 11-14:
+Harita blockout yapılır.
+
+Örnek:
+Saat 14-17:
+Bomba kurma/çözme ve round sistemi yapılır.
+
+Örnek:
+Saat 17-20:
+UI, crosshair, timer, ammo, HP göstergeleri yapılır.
+
+Örnek:
+Saat 20-23:
+Ses, efekt, recoil, spread, küçük polish eklenir.
+
+Örnek:
+Saat 23-25:
+Bug fix, test, build alma, oynanabilir son sürüm hazırlanır.
+
+BANA ŞUNLARI VER:
+Cevabını çok düzenli ver.
+
+Örnek:
+
+1. Kısa oyun açıklaması
+2. 25 saatlik yapılabilir hedef listesi
+3. Unity proje kurulumu
+4. Klasör yapısı
+5. Sahne kurulumu
+6. Gerekli GameObject listesi
+7. Tüm C# scriptleri
+8. Inspector’da hangi objeye hangi script eklenecek
+9. Bot NavMesh kurulumu
+10. Bomba sistemi kurulumu
+11. UI kurulumu
+12. Test etme adımları
+13. Build alma adımları
+14. Olası hatalar ve çözümleri
+
+KOD KALİTESİ:
+Kodlar eksik olmasın.
+
+Örnek:
+Scriptlerin içinde using satırları tam olsun.
+
+Örnek:
+Sınıf isimleri dosya isimleriyle aynı olsun.
+
+Örnek:
+NullReference hatası olmaması için gerekli kontroller eklensin.
+
+Örnek:
+Inspector’da atanması gereken değişkenleri açıkça söyle.
+
+Örnek:
+Kod yorum satırları içersin.
+
+Örnek:
+Yeni başlayan biri de anlayabilsin.
+
+ÖNEMLİ KISITLAMALAR:
+25 saatlik prototip için gerçekçi davran.
+
+Örnek:
+Online multiplayer yapma, onun yerine bot sistemi yap.
+
+Örnek:
+Çok gelişmiş skin sistemi yapma.
+
+Örnek:
+Çok detaylı animasyon sistemi yapma.
+
+Örnek:
+Steam, Faceit, matchmaking, inventory gibi büyük sistemleri yapma.
+
+Örnek:
+Sadece oynanabilir, test edilebilir, basit ama sağlam bir FPS prototipi yap.
+
+TELİF VE ORİJİNALLİK:
+CS2 ismini, logolarını, haritalarını, silah modellerini, seslerini veya birebir UI tasarımını kullanma.
+
+Örnek:
+Oyunun adı “Tactical Strike Prototype” olabilir.
+
+Örnek:
+Harita adı “Blockout Site A” olabilir.
+
+Örnek:
+Takım adları “Attackers” ve “Defenders” olabilir.
+
+Örnek:
+Silah isimleri tamamen uydurma olsun.
+
+SON CEVAP FORMATIN:
+Cevabını çok uzun ama düzenli yaz. Kodları ayrı ayrı bloklar halinde ver.
+
+Örnek format:
+
+# Tactical Strike Prototype
+
+## 1. Oyun Özeti
+
+...
+
+## 2. 25 Saatlik Plan
+
+...
+
+## 3. Unity Kurulumu
+
+...
+
+## 4. Klasör Yapısı
+
+...
+
+## 5. Sahne Kurulumu
+
+...
+
+## 6. Scriptler
+
+### PlayerController.cs
+
+```csharp
+kod burada
+```
+
+### Weapon.cs
+
+```csharp
+kod burada
+```
+
+### BotAI.cs
+
+```csharp
+kod burada
+```
+
+## 7. Inspector Ayarları
+
+...
+
+## 8. Test Etme
+
+...
+
+## 9. Build Alma
+
+...
+
+## 10. Hata Çözümleri
+
+...
+
+Bana direkt uygulanabilir, kopyala-yapıştır yapılabilecek, 25 saat içinde tamamlanabilecek bir Unity FPS prototipi rehberi ve kodları hazırla.
