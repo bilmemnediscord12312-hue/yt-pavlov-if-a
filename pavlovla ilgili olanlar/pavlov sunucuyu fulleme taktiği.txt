@@ -1,0 +1,2 @@
+pavlov sunucuya insan çekmek için çalışmayan jailleri vererek insanları hayal kırıklığına uğratmaktadır
+ama biz ne yaptık? Biz promptları public olarak yayınladık

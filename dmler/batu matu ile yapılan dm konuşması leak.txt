@@ -1,0 +1,37 @@
+Bir WebGL geliştiricisi ve oyun tasarımcısı gibi davranmanı istiyorum. Roblox'taki 'Obby' (parkur) oyunlarına birebir benzeyen, tarayıcıda çalışan bir oyun geliştireceğiz. Aşağıdaki teknik özelliklere ve tasarım detaylarına sadık kalarak bir proje planı ve başlangıç kodu oluştur:
+
+1. Teknik Yığın (Tech Stack):
+
+Engine: Three.js (3D render için).
+
+Physics: Cannon.js veya Ammo.js (Gerçekçi zıplama, düşme ve çarpışma mekanikleri için).
+
+Frontend: Saf HTML5 ve CSS3 (HUD, Sayaç ve Menüler için).
+
+2. Görsel Stil (Roblox Estetiği):
+
+Karakter: Basit bir blok karakter (BoxGeometry). Kollar ve bacaklar basit animasyonlara sahip olmalı.
+
+Dünya: Parlak renkli, 'Plastic' materyal dokusuna sahip yüzen platformlar.
+
+Işıklandırma: Parlak bir güneş ışığı (DirectionalLight) ve yumuşak gölgeler.
+
+3. Mekanikler:
+
+Kontroller: WASD + Space (Zıplama). Kamera fare ile 360 derece dönebilmeli (OrbitControls benzeri ama karakter odaklı).
+
+Checkpoint Sistemi: Karakter belirli platformlara (neon renkli) değdiğinde spawn noktası güncellenmeli.
+
+Ölüm Koşulu: Karakter platformdan aşağı düştüğünde (Y < -10) veya 'Lava' (kırmızı bloklar) bloğuna değdiğinde en son checkpoint'te yeniden doğmalı.
+
+Engeller: Kendi ekseninde dönen çubuklar ve hareket eden platformlar.
+
+4. Kod Yapısı Talebi:
+
+Three.js sahnesini, temel fizik dünyasını ve karakter kontrolcüsünü içeren modüler bir JavaScript yapısı kur.
+
+Karakterin platformlarla olan çarpışmasını hassas bir şekilde hesapla (Raycasting veya Physics engine kullanarak).
+
+HTML/CSS ile ekranın üst kısmına 'Level' ve 'Death Counter' (Ölüm Sayacı) ekle.
+
+Lütfen önce projenin temel dosya yapısını açıkla, ardından index.html, style.css ve ana mantığı içeren game.js kodlarını tek seferde, kopyalanabilir ve çalıştırılabilir şekilde sağla.
