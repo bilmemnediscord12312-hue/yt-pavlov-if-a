@@ -1,0 +1,41 @@
+plugins {
+    id "fabric-loom" version "1.8.13"
+    id "java"
+}
+
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
+
+archivesBaseName = "PavClient"
+version = "1.0.0"
+
+repositories {
+    maven { url "https://maven.fabricmc.net/" }
+    maven { url "https://repo.codemc.io/repository/nms/" }
+    mavenCentral()
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/pavclient.accesswidener")
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.112.0+1.21.4"
+}
+
+
+processResources {
+    inputs.property "version", project.version
+    filteringCharset "UTF-8"
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+    options.release = 21
+}
